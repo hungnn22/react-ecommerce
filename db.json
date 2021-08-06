@@ -1,0 +1,226 @@
+{
+    "types": [
+        {
+            "id": 1,
+            "name": "Men"
+        },
+        {
+            "id": 2,
+            "name": "Women"
+        },
+        {
+            "id": 3,
+            "name": "Kid"
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "name": "Clothings"
+        },
+        {
+            "id": 1,
+            "name": "Handbag"
+        },
+        {
+            "id": 3,
+            "name": "Shoe"
+        },
+        {
+            "id": 4,
+            "name": "Accessories"
+        }
+    ],
+    "products": [
+        {
+            "id": 1,
+            "name": "Pure Pineapple",
+            "price": 13,
+            "categoryId": 1,
+            "typeId": 2,
+            "quantity": 4,
+            "image": "https://res.cloudinary.com/hungnn22cloudinary/image/upload/v1628261958/ecommer/women-1_qzxtrw.jpg",
+            "rating": 4,
+            "des": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals"
+        },
+        {
+            "id": 2,
+            "name": "Guangzhou sweater",
+            "price": 43,
+            "categoryId": 2,
+            "quantity": 4,
+            "image": "https://res.cloudinary.com/hungnn22cloudinary/image/upload/v1628261958/ecommer/women-2_ygh8xc.jpg",
+            "rating": 4,
+            "des": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart"
+        },
+        {
+            "id": 3,
+            "name": "Red Pineapple",
+            "price": 13,
+            "categoryId": 4,
+            "typeId": 2,
+            "quantity": 4,
+            "image": "https://res.cloudinary.com/hungnn22cloudinary/image/upload/v1628261985/ecommer/women-3_pvkawo.jpg",
+            "rating": 4,
+            "des": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive"
+        },
+        {
+            "id": 4,
+            "name": "Converse Shoes",
+            "price": 13,
+            "categoryId": 3,
+            "typeId": 2,
+            "quantity": 4,
+            "image": "https://res.cloudinary.com/hungnn22cloudinary/image/upload/v1628261959/ecommer/women-4_bqpswu.jpg",
+            "rating": 4,
+            "des": "The Football Is Good For Training And Recreational Purposes"
+        },
+        {
+            "id": 5,
+            "name": "Pure Pineapple",
+            "price": 13,
+            "categoryId": 1,
+            "typeId": 1,
+            "quantity": 4,
+            "image": "https://res.cloudinary.com/hungnn22cloudinary/image/upload/v1628261985/ecommer/man-1_bigoqg.jpg",
+            "rating": 4,
+            "des": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles"
+        },
+        {
+            "id": 6,
+            "name": "Guangzhou sweater",
+            "price": 43,
+            "categoryId": 2,
+            "typeId": 1,
+            "quantity": 4,
+            "image": "https://res.cloudinary.com/hungnn22cloudinary/image/upload/v1628261985/ecommer/man-4_okz300.jpg",
+            "rating": 4,
+            "des": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit"
+        },
+        {
+            "id": 7,
+            "name": "Red Pineapple",
+            "price": 13,
+            "categoryId": 4,
+            "typeId": 1,
+            "quantity": 4,
+            "image": "https://res.cloudinary.com/hungnn22cloudinary/image/upload/v1628261985/ecommer/man-3_rvi070.jpg",
+            "rating": 4,
+            "des": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J"
+        },
+        {
+            "id": 8,
+            "name": "Converse Shoes",
+            "price": 13,
+            "categoryId": 3,
+            "typeId": 1,
+            "quantity": 4,
+            "image": "https://res.cloudinary.com/hungnn22cloudinary/image/upload/v1628261985/ecommer/man-2_t0ku0l.jpg",
+            "rating": 4,
+            "des": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart"
+        }
+    ],
+    "reviews": [
+        {
+            "id": "3a1d513a-9ac7-4ad2-bd35-7f8081505f48",
+            "content": "Refined",
+            "productId": 1
+        },
+        {
+            "id": "a50a1bc1-050d-41a6-a7e8-4f93c118b366",
+            "content": "Practical",
+            "productId": 2
+        },
+        {
+            "id": "13d14b52-8b63-47fa-adab-095b315bec0c",
+            "content": "Tasty",
+            "productId": 6
+        },
+        {
+            "id": "f695d37e-c1e7-4696-b574-733d57cb455a",
+            "content": "Practical",
+            "productId": 6
+        },
+        {
+            "id": "78089644-5efd-4e57-a91c-75612771391a",
+            "content": "Handmade",
+            "productId": 5
+        },
+        {
+            "id": "80d929a4-7d69-413c-9359-f7212359a601",
+            "content": "Licensed",
+            "productId": 6
+        },
+        {
+            "id": "695e276d-c3eb-49d4-ab8e-d7f37719e6d5",
+            "content": "Rustic",
+            "productId": 5
+        },
+        {
+            "id": "3b5465ee-5db2-4401-9e57-3fdf4c13020d",
+            "content": "Gorgeous",
+            "productId": 1
+        },
+        {
+            "id": "a417bd98-ee52-4904-9674-f2ad9c1fe804",
+            "content": "Licensed",
+            "productId": 8
+        },
+        {
+            "id": "4857478c-7a05-499a-85b5-9928e7ea07a5",
+            "content": "Licensed",
+            "productId": 6
+        },
+        {
+            "id": "8d7565d0-fae4-41c4-8b13-c60ee825ce4f",
+            "content": "Intelligent",
+            "productId": 6
+        },
+        {
+            "id": "6d3b0b42-164f-471c-846e-2f51a9d4be1b",
+            "content": "Handmade",
+            "productId": 5
+        },
+        {
+            "id": "9e27a0bc-c107-4aab-8139-db1035dd595a",
+            "content": "Sleek",
+            "productId": 1
+        },
+        {
+            "id": "51c1c288-782c-4661-aa25-b792e5f4e0cd",
+            "content": "Handcrafted",
+            "productId": 1
+        },
+        {
+            "id": "f36997da-2c1b-4369-ae81-c1b6fc41e04b",
+            "content": "Ergonomic",
+            "productId": 5
+        },
+        {
+            "id": "8abfb7db-4109-46e0-815e-1f3756d7ef68",
+            "content": "Handmade",
+            "productId": 3
+        },
+        {
+            "id": "bf564da2-fc59-4582-a656-738f75dc0d0b",
+            "content": "Handmade",
+            "productId": 5
+        },
+        {
+            "id": "b13bdac2-3acb-4eee-80ca-44949c050308",
+            "content": "Unbranded",
+            "productId": 4
+        },
+        {
+            "id": "c2b9e08d-10ed-4f47-8659-ef90c0ce3a47",
+            "content": "Awesome",
+            "productId": 8
+        },
+        {
+            "id": "c0f49fac-3fa7-4738-ab2c-262f2a4b65c8",
+            "content": "Refined",
+            "productId": 6
+        }
+    ],
+    "users": []
+}
