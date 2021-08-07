@@ -7,6 +7,7 @@ import 'slick-carousel/slick/slick-theme.css'
 function App() {
 
   const [products, setProducts] = useState([])
+  const [categories, setCategories] = useState([])
 
   useEffect(() => {
     const fetchProcucts = async () => {
@@ -16,9 +17,19 @@ function App() {
     fetchProcucts()
   }, [])
 
+  useEffect(() => {
+    const fetchCategory = async () => {
+      const {data} = await base.getAll('/categories')
+      setCategories(data)
+    }
+    fetchCategory()
+  }, [])
+
   return (
     <Routes 
       products={products}
+
+      categories={categories}
     />
   );
 }

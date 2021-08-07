@@ -10,7 +10,7 @@ const Background = () => {
                                 <h1>Black friday</h1>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore</p>
-                                <a href="#" className="primary-btn">Shop Now</a>
+                                <a href="/" className="primary-btn">Shop Now</a>
                             </div>
                         </div>
                         <div className="off-card">
@@ -26,7 +26,7 @@ const Background = () => {
                                 <h1>Black friday</h1>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore</p>
-                                <a href="#" className="primary-btn">Shop Now</a>
+                                <a href="/" className="primary-btn">Shop Now</a>
                             </div>
                         </div>
                         <div className="off-card">

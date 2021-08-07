@@ -30,7 +30,7 @@ const Clock = () => {
                             <p>Secs</p>
                         </div>
                     </div>
-                    <a href="#" className="primary-btn">Shop Now</a>
+                    <a href="/" className="primary-btn">Shop Now</a>
                 </div>
             </div>
         </section>

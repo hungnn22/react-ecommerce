@@ -25,7 +25,7 @@ const Blogs = () => {
                                             5
                                         </div>
                                     </div>
-                                    <a href="#">
+                                    <a href="/">
                                         <h4>The Best Street Style From London Fashion Week</h4>
                                     </a>
                                     <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
@@ -46,7 +46,7 @@ const Blogs = () => {
                                             5
                                         </div>
                                     </div>
-                                    <a href="#">
+                                    <a href="/">
                                         <h4>Vogue's Ultimate Guide To Autumn/Winter 2021 Shoes</h4>
                                     </a>
                                     <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
@@ -67,7 +67,7 @@ const Blogs = () => {
                                             5
                                         </div>
                                     </div>
-                                    <a href="#">
+                                    <a href="/">
                                         <h4>How To Brighten Your Wardrobe With A Dash Of Lime</h4>
                                     </a>
                                     <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>

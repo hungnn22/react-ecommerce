@@ -2,6 +2,7 @@ import Product from "../Product/Product"
 import Slider from "react-slick"
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import { Link } from "react-router-dom";
 
 
 const settings = {
@@ -39,11 +40,27 @@ const Men = (props) => {
                         {/* </div> */}
                     </div>
                     <div className="col-lg-3 offset-lg-1">
-                        <div className="product-large set-bg m-large" data-setbg="assets/img/man-large.jpg">
+                        <div className="product-large set-bg m-large"
+                            data-setbg="assets/img/man-large.jpg"
+                            style={{ backgroundImage: "url('https://res.cloudinary.com/hungnn22cloudinary/image/upload/v1628348839/ecommer/man-large_qqehyq.jpg')" }}
+                        >
                             <h2>Men’s</h2>
-                            <a href="#">Discover More</a>
+                            <a href="/">Discover More</a>
                         </div>
                     </div>
+
+                    {/* <div className="col-lg-3">
+                        <div className="product-large set-bg" data-setbg="https://res.cloudinary.com/hungnn22cloudinary/image/upload/v1628348839/ecommer/women-large_j9groi.jpg"
+                            style={{
+                                backgroundImage: "url('https://res.cloudinary.com/hungnn22cloudinary/image/upload/v1628348839/ecommer/women-large_j9groi.jpg')"
+                            }}
+                        >
+                            <h2>Women’s</h2>
+                            <Link exact to="/womens">Discover More</Link>
+                        </div>
+                    </div> */}
+
+
                 </div>
             </div>
         </section>

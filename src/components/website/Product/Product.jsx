@@ -1,4 +1,7 @@
+import { Link } from 'react-router-dom'
 import { useCart } from 'react-use-cart'
+import ProductModal from '../ProductModal/ProductModal'
+import Star from '../Star/Star'
 import Toast from '../Toast/Toast'
 
 const Product = ({ product }) => {
@@ -19,20 +22,32 @@ const Product = ({ product }) => {
             <div className="pi-pic">
                 <img src={product.image} alt="" />
                 <div className="icon">
-                    <i className="icon_heart_alt"></i>
+                    <Star rating={product.rating} />
                 </div>
                 <ul>
                     <button onClick={handleAddToCart} className="w-icon btn btn-warning"><i className="text-light icon_bag_alt" /></button>
-                    <li className="quick-view"><a href="#">+ Quick View</a></li>
-                    <li className="w-icon"><a href="#"><i className="fa fa-random"></i></a></li>
+                    <li className="quick-view">
+                        <button
+                            className="btn btn-default"
+                            data-toggle="modal"
+                            data-target={`#productModal${product.id}`}
+                        >+ View</button>
+                        <div className="modal fade" id={`productModal${product.id}`} tabIndex={-1} role="dialog"
+                            aria-labelledby={`productModal${product.id}`}
+                            aria-hidden="true">
+                            <ProductModal product={product} />
+                        </div>
+
+                    </li>
+                    <li className="w-icon"><a href="/"><i className="fa fa-random"></i></a></li>
                 </ul>
             </div>
             <div className="pi-text">
-                <a href="#">
+                <Link exact={true} to={`/detail/${product.id}`}>
                     <h5>{product.name}</h5>
-                </a>
+                </Link>
                 <div className="product-price">
-                    $34.00
+                    ${product.price.toFixed(2)}
                 </div>
             </div>
         </div>

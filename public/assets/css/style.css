@@ -380,7 +380,7 @@ ol {
 }
 
 .inner-header {
-	padding: 39px 0;
+	padding: 20px 0;
 }
 
 .inner-header .logo {
@@ -1128,7 +1128,7 @@ ol {
 }
 
 .product-item:hover .pi-pic .icon {
-	top: 15px;
+	top: 3px;
 	opacity: 1;
 }
 
@@ -1187,7 +1187,7 @@ ol {
 .product-item .pi-pic ul li {
 	list-style: none;
 	display: inline-block;
-	background: #ffffff;
+	/* background: #ffffff; */
 }
 
 .product-item .pi-pic ul li.w-icon.active a {
@@ -4288,7 +4288,7 @@ ol {
     font-size: 32px;
     font-weight: 500; }
 
-.btn-to-top :hover {
+.btn-to-top:hover {
 	background-color: #000000;
 	opacity: 1;
 }

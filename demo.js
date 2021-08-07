@@ -3,11 +3,15 @@ const fs = require('fs')
 
 const getViews = () => {
     const list = []
-    for (let i = 0; i < 20; i++) {
-        const view = {
-            hehe: faker.commerce.productDescription()
+    for (let i = 0; i < 30; i++) {
+        const item = {
+            id: faker.datatype.uuid(),
+            content: faker.lorem.sentence(),
+            productId: Math.floor(Math.random() * 8 + 1),
+            rating: Math.floor(Math.random() * 5 + 1),
+            createAt: faker.date.past().toDateString()
         }
-        list.push(view)
+        list.push(item)
     }
     return list
 }
@@ -19,10 +23,12 @@ const getDes = () => {
 
 (() => {
     const db = {
-        views: getViews()
+        reviews: getViews()
     } 
 
     fs.writeFile("data.json", JSON.stringify(db), () => {
         console.log("Success!")
     })
 })()
+
+

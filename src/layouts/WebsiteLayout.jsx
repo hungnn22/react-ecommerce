@@ -11,10 +11,9 @@ const WebsiteLayout = (props) => {
         <div className="" style={{ position: 'relative' }}>
             <Header />
             <Background />
-            <Banner />
-            <div>{props.children}</div>
-            <TopProduct />
-            <Blogs />
+            <div style={{minHeight: '150vh', position: 'relative'}}>
+                {props.children}
+                </div>
             <Footer />
             <button onClick={() => {
                 window.scroll({
@@ -22,8 +21,9 @@ const WebsiteLayout = (props) => {
                     left: 0,
                     behavior: 'smooth'
                 });
-            }} className="btn btn-dark btn-to-top"
+            }} className="btn btn-to-top"
                 style={{
+                    backgroundColor: '#e7ab3c',
                     width: '56px', height: '56px', borderRadius: '50%',
                     position: 'fixed',
                     bottom: '20px',

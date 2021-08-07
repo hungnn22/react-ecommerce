@@ -1,3 +1,4 @@
+import { Link, NavLink } from "react-router-dom"
 import { useCart } from "react-use-cart"
 import Toast from "../Toast/Toast"
 
@@ -29,7 +30,7 @@ const Header = () => {
                         </div>
                     </div>
                     <div className="ht-right">
-                        <a href="#" className="login-panel"><i className="fa fa-user"></i>Login</a>
+                        <a href="/" className="login-panel"><i className="fa fa-user"></i>Login</a>
                         {/* <div className="lan-selector">
                             <select className="language_drop" name="countries" id="countries" style={{ width: "300px" }}>
                                 <option value='yt' data-image="assets/img/flag-1.jpg" data-imagecss="flag yt"
@@ -39,25 +40,25 @@ const Header = () => {
                             </select>
                         </div> */}
                         <div className="top-social">
-                            <a href="#"><i className="ti-facebook"></i></a>
-                            <a href="#"><i className="ti-twitter-alt"></i></a>
-                            <a href="#"><i className="ti-linkedin"></i></a>
-                            <a href="#"><i className="ti-pinterest"></i></a>
+                            <a href="/"><i className="ti-facebook"></i></a>
+                            <a href="/"><i className="ti-twitter-alt"></i></a>
+                            <a href="/"><i className="ti-linkedin"></i></a>
+                            <a href="/"><i className="ti-pinterest"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="container">
                 <div className="inner-header">
-                    <div className="row">
+                    <div className="row d-flex justify-content-between">
                         <div className="col-lg-2 col-md-2">
                             <div className="logo">
-                                <a href="#">
+                                <a href="/">
                                     F-Shop
                                 </a>
                             </div>
                         </div>
-                        <div className="col-lg-7 col-md-7">
+                        {/* <div className="col-lg-7 col-md-7">
                             <div className="advanced-search">
                                 <button type="button" className="category-btn">All Categories</button>
                                 <div className="input-group">
@@ -65,17 +66,17 @@ const Header = () => {
                                     <button type="button"><i className="ti-search"></i></button>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         <div className="col-lg-3 text-right col-md-3">
                             <ul className="nav-right">
                                 <li className="heart-icon">
-                                    <a href="#">
+                                    <a href="/">
                                         <i className="icon_heart_alt"></i>
                                         <span>1</span>
                                     </a>
                                 </li>
                                 <li className="cart-icon">
-                                    <a href="#">
+                                    <a href="/">
                                         <i className="icon_bag_alt"></i>
                                         {totalItems > 0 ? <span>{totalItems}</span> : ''}
                                     </a>
@@ -109,8 +110,8 @@ const Header = () => {
                                                 <h5>${cartTotal}</h5>
                                             </div> : ''}
                                         <div className="select-button">
-                                            <a href="#" className="primary-btn view-card">VIEW CARD</a>
-                                            <a href="#" className="primary-btn checkout-btn">CHECK OUT</a>
+                                            <a href="/" className="primary-btn view-card">VIEW CARD</a>
+                                            <a href="/" className="primary-btn checkout-btn">CHECK OUT</a>
                                         </div>
                                     </div>
                                 </li>
@@ -127,40 +128,25 @@ const Header = () => {
                             <i className="ti-menu"></i>
                             <span>All departments</span>
                             <ul className="depart-hover">
-                                <li className="active"><a href="#">Women’s Clothing</a></li>
-                                <li><a href="#">Men’s Clothing</a></li>
-                                <li><a href="#">Underwear</a></li>
-                                <li><a href="#">Kid's Clothing</a></li>
-                                <li><a href="#">Brand Fashion</a></li>
-                                <li><a href="#">Accessories/Shoes</a></li>
-                                <li><a href="#">Luxury Brands</a></li>
-                                <li><a href="#">Brand Outdoor Apparel</a></li>
+                                <li className="active"><a href="/">Women’s Clothing</a></li>
+                                <li><a href="/">Men’s Clothing</a></li>
+                                <li><a href="/">Underwear</a></li>
+                                <li><a href="/">Kid's Clothing</a></li>
+                                <li><a href="/">Brand Fashion</a></li>
+                                <li><a href="/">Accessories/Shoes</a></li>
+                                <li><a href="/">Luxury Brands</a></li>
+                                <li><a href="/">Brand Outdoor Apparel</a></li>
                             </ul>
                         </div>
                     </div>
                     <nav className="nav-menu mobile-menu">
                         <ul>
-                            <li className="active"><a href="#">Home</a></li>
-                            <li><a href="#">Shop</a></li>
-                            <li><a href="#">Collection</a>
-                                <ul className="dropdown">
-                                    <li><a href="#">Men's</a></li>
-                                    <li><a href="#">Women's</a></li>
-                                    <li><a href="#">Kid's</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Pages</a>
-                                <ul className="dropdown">
-                                    <li><a href="#">Blog Details</a></li>
-                                    <li><a href="#">Shopping Cart</a></li>
-                                    <li><a href="#">Checkout</a></li>
-                                    <li><a href="#">Faq</a></li>
-                                    <li><a href="#">Register</a></li>
-                                    <li><a href="#">Login</a></li>
-                                </ul>
-                            </li>
+                            <li className=""><NavLink exact={true} activeClassName="bg-warning" to="/">Home</NavLink></li>
+                            <li className=""><NavLink exact={true} activeClassName="bg-warning" to="/mens">Men's</NavLink></li>
+                            <li className=""><NavLink exact={true} activeClassName="bg-warning" to="/womens">Women's</NavLink></li>
+                            
+                            <li><a href="/">Blog</a></li>
+                            <li><a href="/">Contact</a></li>
                         </ul>
                     </nav>
                     <div id="mobile-menu-wrap"></div>
