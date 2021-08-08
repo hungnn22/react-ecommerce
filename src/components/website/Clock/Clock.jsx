@@ -3,7 +3,6 @@ import useClock from "../../../utils/hooks/useClock"
 const Clock = () => {
 
     const {timer} = useClock()
-    console.log(timer);
 
     return (
         <section className="deal-of-week set-bg spad"

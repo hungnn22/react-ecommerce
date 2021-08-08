@@ -37,7 +37,7 @@ const Men = (props) => {
                             style={{ backgroundImage: "url('https://res.cloudinary.com/hungnn22cloudinary/image/upload/v1628348839/ecommer/man-large_qqehyq.jpg')" }}
                         >
                             <h2>Men’s</h2>
-                            <Link exac={true} to="/mens">Discover More</Link>
+                            <Link exact={true} to="/mens">Discover More</Link>
                         </div>
                     </div>
                 </div>

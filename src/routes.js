@@ -8,11 +8,32 @@ import Home from "./pages/website/home/home";
 import ProductDetail from './pages/website/product-detail/ProductDetail'
 import Signin from "./pages/website/signin/signin";
 import Signup from "./pages/website/signup/signup";
+import AdminLayout from './layouts/AdminLayout'
+import Dashboard from "./pages/admin/dashboard/dashboard";
+import ProductList from "./pages/admin/products/list";
+import AddProduct from "./pages/admin/products/add";
+import EditProduct from "./pages/admin/products/edit";
 
 const Routes = (props) => {
     return (
         <Switch>
             <Route exact={true} path="/admin/:path?/:path?/:path?">
+                <AdminLayout>
+                    <Route exact path="/admin/products/add">
+                        <AddProduct />
+                    </Route>
+                    <Route exact path="/admin/products/:id/edit">
+                        <EditProduct />
+                    </Route>
+
+
+                    <Route exact path="/admin/products">
+                        <ProductList />
+                    </Route>
+                    <Route exact path="/admin">
+                        <Dashboard />
+                    </Route>
+                </AdminLayout>
             </Route>
             <Route exact={true} path="/signin">
                 <Signin {...props} />

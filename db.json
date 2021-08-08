@@ -15,28 +15,28 @@
   ],
   "categories": [
     {
-      "id": 1,
+      "id": "55fb0026-417f-485f-a21a-4c587e98a2c9",
       "name": "Clothings"
     },
     {
-      "id": 2,
+      "id": "7c969d40-bc16-478d-81ad-006b0515846e",
       "name": "Handbag"
     },
     {
-      "id": 3,
+      "id": "5cbf0400-2004-4a62-b1bf-b59ddcfa921b",
       "name": "Shoe"
     },
     {
-      "id": 4,
+      "id": "555082f2-d212-43d3-bfa6-6319e6328c84",
       "name": "Accessories"
     }
   ],
   "products": [
     {
-      "id": 1,
+      "id": "2a09070f-36a8-481f-aa9e-35a94a35cec8",
       "name": "Pure Pineapple",
       "price": 13,
-      "categoryId": 1,
+      "categoryId": "55fb0026-417f-485f-a21a-4c587e98a2c9",
       "typeId": 2,
       "quantity": 23,
       "image": "https://res.cloudinary.com/hungnn22cloudinary/image/upload/v1628261958/ecommer/women-1_qzxtrw.jpg",
@@ -44,20 +44,21 @@
       "des": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals"
     },
     {
-      "id": 2,
+      "id": "dd30ec22-b9b6-4071-a515-11ae2e82a891",
       "name": "Guangzhou sweater",
       "price": 43,
-      "categoryId": 2,
+      "categoryId": "55fb0026-417f-485f-a21a-4c587e98a2c9",
+      "typeId": 1,
       "quantity": 4,
       "image": "https://res.cloudinary.com/hungnn22cloudinary/image/upload/v1628261958/ecommer/women-2_ygh8xc.jpg",
       "rating": 4,
       "des": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart"
     },
     {
-      "id": 3,
+      "id": "39e9cfd2-9ed5-4aa4-86a1-443bec6fc6a2",
       "name": "Red Pineapple",
       "price": 23,
-      "categoryId": 4,
+      "categoryId": "7c969d40-bc16-478d-81ad-006b0515846e",
       "typeId": 2,
       "quantity": 22,
       "image": "https://res.cloudinary.com/hungnn22cloudinary/image/upload/v1628261985/ecommer/women-3_pvkawo.jpg",
@@ -65,10 +66,10 @@
       "des": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive"
     },
     {
-      "id": 4,
+      "id": "bfbc0d66-36f9-4128-bad7-78484914968f",
       "name": "Converse Shoes",
       "price": 52,
-      "categoryId": 3,
+      "categoryId": "7c969d40-bc16-478d-81ad-006b0515846e",
       "typeId": 2,
       "quantity": 15,
       "image": "https://res.cloudinary.com/hungnn22cloudinary/image/upload/v1628261959/ecommer/women-4_bqpswu.jpg",
@@ -76,10 +77,10 @@
       "des": "The Football Is Good For Training And Recreational Purposes"
     },
     {
-      "id": 5,
+      "id": "3cf80f1b-ef99-4494-b756-f40c0a9aab89",
       "name": "Pure Pineapple",
       "price": 18,
-      "categoryId": 1,
+      "categoryId": "5cbf0400-2004-4a62-b1bf-b59ddcfa921b",
       "typeId": 1,
       "quantity": 32,
       "image": "https://res.cloudinary.com/hungnn22cloudinary/image/upload/v1628261985/ecommer/man-1_bigoqg.jpg",
@@ -87,10 +88,10 @@
       "des": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles"
     },
     {
-      "id": 6,
+      "id": "672d3dd0-3ba3-486f-bbd6-85229a265fb4",
       "name": "Guangzhou sweater",
       "price": 46,
-      "categoryId": 2,
+      "categoryId": "5cbf0400-2004-4a62-b1bf-b59ddcfa921b",
       "typeId": 1,
       "quantity": 24,
       "image": "https://res.cloudinary.com/hungnn22cloudinary/image/upload/v1628261985/ecommer/man-4_okz300.jpg",
@@ -98,10 +99,10 @@
       "des": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit"
     },
     {
-      "id": 7,
+      "id": "c6cfca56-40bb-4c14-9668-53ead5c9f283",
       "name": "Red Pineapple",
       "price": 33,
-      "categoryId": 4,
+      "categoryId": "555082f2-d212-43d3-bfa6-6319e6328c84",
       "typeId": 1,
       "quantity": 44,
       "image": "https://res.cloudinary.com/hungnn22cloudinary/image/upload/v1628261985/ecommer/man-3_rvi070.jpg",
@@ -109,227 +110,209 @@
       "des": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J"
     },
     {
-      "id": 8,
+      "id": "e1934d1b-246c-4954-8432-1a0fd6d88025",
       "name": "Converse Shoes",
       "price": 63,
-      "categoryId": 3,
+      "categoryId": "555082f2-d212-43d3-bfa6-6319e6328c84",
       "typeId": 1,
       "quantity": 21,
       "image": "https://res.cloudinary.com/hungnn22cloudinary/image/upload/v1628261985/ecommer/man-2_t0ku0l.jpg",
       "rating": 4,
       "des": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart"
+    },
+    {
+      "typeId": "1",
+      "categoryId": "55fb0026-417f-485f-a21a-4c587e98a2c9",
+      "name": "Hung123123",
+      "price": "123",
+      "quantity": "120",
+      "image": "https://res.cloudinary.com/hungnn22cloudinary/image/upload/v1628450263/ecommer/vsix6cwqfcq9iphhyyyl.jpg",
+      "des": "dfg",
+      "id": "4JdLAJv"
     }
   ],
   "reviews": [
     {
       "id": "883b83a7-c971-4b38-9733-61284d3b3a61",
       "content": "Veniam deserunt harum ut dolorum numquam.",
-      "productId": 6,
+      "productId": "2a09070f-36a8-481f-aa9e-35a94a35cec8",
       "rating": 3,
       "createAt": "Sun May 23 2021"
     },
     {
       "id": "4185c97b-98f5-4fcf-bae5-71fade717e83",
       "content": "Adipisci magni eum aut delectus ut saepe.",
-      "productId": 7,
+      "productId": "2a09070f-36a8-481f-aa9e-35a94a35cec8",
       "rating": 2,
       "createAt": "Thu Oct 15 2020"
     },
     {
       "id": "0b78830c-c12b-4916-bb6e-cb14ff3edb83",
       "content": "Et dignissimos ab quisquam aut debitis voluptas.",
-      "productId": 3,
+      "productId": "2a09070f-36a8-481f-aa9e-35a94a35cec8",
       "rating": 4,
       "createAt": "Mon Jul 05 2021"
     },
     {
       "id": "b4df1e82-f190-4761-9469-ef0051d04dc9",
       "content": "Quo quo quo laudantium aspernatur voluptatibus voluptatibus molestias similique.",
-      "productId": 4,
+      "productId": "2a09070f-36a8-481f-aa9e-35a94a35cec8",
       "rating": 1,
       "createAt": "Wed Oct 21 2020"
     },
     {
       "id": "cd10ecf2-c6de-42eb-bbd1-4e9b73c13716",
       "content": "Aspernatur officia saepe omnis doloremque.",
-      "productId": 2,
+      "productId": "2a09070f-36a8-481f-aa9e-35a94a35cec8",
       "rating": 5,
       "createAt": "Fri Oct 09 2020"
     },
     {
       "id": "cb04c636-3d06-4c2d-a859-195873ded220",
       "content": "Ea accusantium culpa velit eum sed accusamus quisquam deserunt ducimus.",
-      "productId": 5,
+      "productId": "dd30ec22-b9b6-4071-a515-11ae2e82a891",
       "rating": 1,
       "createAt": "Fri Jan 29 2021"
     },
     {
       "id": "20185f2f-37e3-4ff0-8166-824b3fbbd2f2",
       "content": "Inventore unde ducimus vel maxime quos.",
-      "productId": 8,
+      "productId": "dd30ec22-b9b6-4071-a515-11ae2e82a891",
       "rating": 4,
       "createAt": "Wed Jun 16 2021"
     },
     {
       "id": "63a6db9f-07cd-4871-ba5c-4b159e78a653",
       "content": "Voluptatem inventore hic praesentium magni ipsam ipsa praesentium quo.",
-      "productId": 3,
+      "productId": "dd30ec22-b9b6-4071-a515-11ae2e82a891",
       "rating": 4,
       "createAt": "Fri Jul 23 2021"
     },
     {
       "id": "def6eab0-1bea-4a4a-8cfe-3f870a8d7144",
       "content": "Reiciendis quo voluptatum quisquam quia blanditiis ipsam commodi quos.",
-      "productId": 4,
+      "productId": "dd30ec22-b9b6-4071-a515-11ae2e82a891",
       "rating": 3,
       "createAt": "Tue Mar 16 2021"
     },
     {
       "id": "fa7a317f-6eb7-4e4c-9c65-cda362066832",
       "content": "Laboriosam perspiciatis quod cupiditate qui odio omnis harum dolorem optio.",
-      "productId": 8,
+      "productId": "dd30ec22-b9b6-4071-a515-11ae2e82a891",
       "rating": 2,
       "createAt": "Sun Jun 27 2021"
     },
     {
       "id": "a1d48aef-5b11-48c0-ad1d-6a0571af812a",
       "content": "Reiciendis voluptas velit consequuntur cumque autem sit quae.",
-      "productId": 3,
+      "productId": "39e9cfd2-9ed5-4aa4-86a1-443bec6fc6a2",
       "rating": 2,
       "createAt": "Sun Feb 21 2021"
     },
     {
       "id": "a4d20cb0-e47d-4a53-bf44-820c389fedd9",
       "content": "Eius quia provident omnis.",
-      "productId": 1,
+      "productId": "39e9cfd2-9ed5-4aa4-86a1-443bec6fc6a2",
       "rating": 5,
       "createAt": "Tue Aug 11 2020"
     },
     {
       "id": "12b01b1b-7cf1-43db-8997-e8bfda86ec44",
       "content": "Doloremque officia libero minus.",
-      "productId": 1,
+      "productId": "39e9cfd2-9ed5-4aa4-86a1-443bec6fc6a2",
       "rating": 4,
       "createAt": "Sat Jan 16 2021"
     },
     {
       "id": "8820df4f-b099-4604-9d59-ef107f7dbeb2",
       "content": "Aperiam iure quia aut dolorem eos.",
-      "productId": 2,
+      "productId": "bfbc0d66-36f9-4128-bad7-78484914968f",
       "rating": 4,
       "createAt": "Fri Apr 23 2021"
     },
     {
       "id": "e504ab43-ce5b-4627-9a27-15271a2e8b4a",
       "content": "Commodi doloribus repellat ipsa eos quaerat quidem quidem veniam voluptatum.",
-      "productId": 7,
+      "productId": "bfbc0d66-36f9-4128-bad7-78484914968f",
       "rating": 2,
       "createAt": "Fri Dec 18 2020"
     },
     {
       "id": "e0d7b2c0-bae0-47bc-8242-eaf04ed7c810",
       "content": "Commodi enim veritatis.",
-      "productId": 1,
+      "productId": "bfbc0d66-36f9-4128-bad7-78484914968f",
       "rating": 4,
       "createAt": "Fri Sep 25 2020"
     },
     {
       "id": "7bbc5deb-e5d8-4c47-8d5a-786dea403fd5",
       "content": "Autem voluptates ipsam eum quae accusantium cumque maxime.",
-      "productId": 2,
+      "productId": "3cf80f1b-ef99-4494-b756-f40c0a9aab89",
       "rating": 2,
       "createAt": "Wed Jan 13 2021"
     },
     {
       "id": "a34233ca-f3c4-468c-baf3-2e19d975a324",
       "content": "Rerum perspiciatis consequatur tempore impedit impedit magnam.",
-      "productId": 6,
+      "productId": "3cf80f1b-ef99-4494-b756-f40c0a9aab89",
       "rating": 5,
       "createAt": "Fri May 07 2021"
     },
     {
       "id": "f2d79308-8368-4135-a7e8-108a3b9e541a",
       "content": "Cumque beatae et nihil quo quas quis tenetur est.",
-      "productId": 8,
+      "productId": "3cf80f1b-ef99-4494-b756-f40c0a9aab89",
       "rating": 3,
       "createAt": "Thu Oct 15 2020"
     },
     {
       "id": "5b61e8a1-bae3-4903-ae8d-1808ec60c4fc",
       "content": "Aut eum quo et rerum et aut.",
-      "productId": 4,
+      "productId": "c6cfca56-40bb-4c14-9668-53ead5c9f283",
       "rating": 1,
       "createAt": "Tue Sep 01 2020"
     },
     {
       "id": "f88e3dfa-7875-4f1b-8441-2aa5d795ef77",
       "content": "Eligendi magnam asperiores ut cupiditate accusamus voluptates ut quis.",
-      "productId": 7,
+      "productId": "c6cfca56-40bb-4c14-9668-53ead5c9f283",
       "rating": 3,
       "createAt": "Fri Jul 16 2021"
     },
     {
       "id": "f42b8f3b-cb57-4a07-9151-0c0bd240615d",
       "content": "Est vel aut facilis dolores.",
-      "productId": 4,
+      "productId": "c6cfca56-40bb-4c14-9668-53ead5c9f283",
       "rating": 4,
       "createAt": "Mon Dec 28 2020"
     },
     {
       "id": "4901dd14-b588-477f-b981-0f112c8b5134",
       "content": "Vel nobis et et consequatur ipsum.",
-      "productId": 4,
+      "productId": "e1934d1b-246c-4954-8432-1a0fd6d88025",
       "rating": 4,
       "createAt": "Mon May 24 2021"
     },
     {
       "id": "75cc0acb-9927-4f7c-a67b-79a59f1b39ed",
       "content": "Mollitia eos et dolores beatae nihil.",
-      "productId": 7,
+      "productId": "e1934d1b-246c-4954-8432-1a0fd6d88025",
       "rating": 5,
       "createAt": "Sun Oct 11 2020"
     },
     {
       "id": "a8b1c61a-c1df-485c-811a-1f12eae56a50",
       "content": "Culpa vitae pariatur.",
-      "productId": 8,
+      "productId": "e1934d1b-246c-4954-8432-1a0fd6d88025",
       "rating": 2,
       "createAt": "Tue May 25 2021"
     },
     {
       "id": "92a6ccf9-4457-481c-9e29-7bc5fc288d2b",
       "content": "Et consequuntur pariatur amet natus natus culpa tempora occaecati ipsa.",
-      "productId": 4,
-      "rating": 5,
+      "productId": "e1934d1b-246c-4954-8432-1a0fd6d88025",
+      "rating": 3,
       "createAt": "Sat Dec 05 2020"
-    },
-    {
-      "id": "14f46570-7f66-4f06-ad70-e543f409c7cf",
-      "content": "Officiis voluptas cumque assumenda ea fugiat repudiandae eveniet.",
-      "productId": 5,
-      "rating": 1,
-      "createAt": "Tue Aug 03 2021"
-    },
-    {
-      "id": "78d0e954-94e1-457d-9f93-9988ecc2f579",
-      "content": "Accusantium ex omnis voluptas dicta numquam et et nihil quis.",
-      "productId": 5,
-      "rating": 4,
-      "createAt": "Mon May 24 2021"
-    },
-    {
-      "id": "39fd2192-4d22-46bb-8b3e-5f2874efbcd6",
-      "content": "Qui doloribus aut perferendis enim.",
-      "productId": 1,
-      "rating": 1,
-      "createAt": "Wed Feb 24 2021"
-    },
-    {
-      "id": "42804179-f21b-4eab-b8b3-2f859803672c",
-      "content": "Velit est non laboriosam eum repellendus placeat quasi omnis.",
-      "productId": 5,
-      "rating": 2,
-      "createAt": "Tue May 25 2021"
     }
   ],
   "users": [
@@ -344,14 +327,48 @@
       "password": "$2a$10$5vGcq3uABPPoGkLyGqiMmeuoo1Hm4oQMTGHvY5GxvcARrHjJAHpk2",
       "name": "Hung123",
       "id": 2
+    },
+    {
+      "email": "123anhday@gmail.com",
+      "password": "$2a$10$DUwWhU/Lma.r8VCtzReBQODhSaZ3IgXv8TFCB.ww/GsixokAsr2Aq",
+      "name": "Hung's Workspace",
+      "id": 3
     }
   ],
   "orders": [
     {
-      "id": 1,
-      "total": 0,
+      "total": 46,
+      "status": true,
+      "createAt": 1628434232608,
+      "orderJson": "{\"items\":[{\"id\":6,\"name\":\"Guangzhou sweater\",\"price\":46,\"categoryId\":2,\"typeId\":1,\"quantity\":1,\"image\":\"https://res.cloudinary.com/hungnn22cloudinary/image/upload/v1628261985/ecommer/man-4_okz300.jpg\",\"rating\":4,\"des\":\"Carbonite web goalkeeper gloves are ergonomically designed to give easy fit\",\"itemTotal\":46}],\"isEmpty\":false,\"totalItems\":1,\"totalUniqueItems\":1,\"cartTotal\":46,\"metadata\":{}}",
+      "address": "Ha noi",
+      "phone": "0933324423",
       "userId": 2,
-      "status": false
+      "id": "82ea5037-99de-4451-bbfb-10af62c9ed00"
+    },
+    {
+      "total": 52,
+      "status": true,
+      "createAt": 1628451772578,
+      "orderJson": "{\"items\":[{\"id\":\"2a09070f-36a8-481f-aa9e-35a94a35cec8\",\"name\":\"Pure Pineapple\",\"price\":13,\"categoryId\":\"55fb0026-417f-485f-a21a-4c587e98a2c9\",\"typeId\":2,\"quantity\":4,\"image\":\"https://res.cloudinary.com/hungnn22cloudinary/image/upload/v1628261958/ecommer/women-1_qzxtrw.jpg\",\"rating\":4,\"des\":\"Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals\",\"itemTotal\":52}],\"isEmpty\":false,\"totalItems\":4,\"totalUniqueItems\":1,\"cartTotal\":52,\"metadata\":{}}",
+      "address": "Ha noi",
+      "phone": "0933324423",
+      "userId": 2,
+      "id": "GjWb9eS"
+    }
+  ],
+  "orderDetails": [
+    {
+      "orderId": "82ea5037-99de-4451-bbfb-10af62c9ed00",
+      "productId": "dd30ec22-b9b6-4071-a515-11ae2e82a891",
+      "quantity": 1,
+      "id": "f56753af-4a99-42fe-8e79-71a75ecc4061"
+    },
+    {
+      "orderId": "GjWb9eS",
+      "productId": "2a09070f-36a8-481f-aa9e-35a94a35cec8",
+      "quantity": 4,
+      "id": "nwq3J1F"
     }
   ]
 }

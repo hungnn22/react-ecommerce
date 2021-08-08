@@ -18,7 +18,6 @@ const Signup = () => {
             setFailed(false)
             reset({})
         } catch (error) {
-            console.log(error.response);
             setFailed(error.response.data)
             setResult(false)
         }

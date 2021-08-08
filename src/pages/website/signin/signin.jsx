@@ -4,7 +4,10 @@ import { useForm } from 'react-hook-form';
 import { Link, useHistory } from 'react-router-dom';
 import base from '../../../utils/api/base';
 import auth from '../../../utils/auth/auth';
+import cartService from '../../../utils/service/cart.service';
 import './signin.css';
+import queryString from 'query-string'
+import { useCart } from 'react-use-cart';
 
 const Signin = () => {
 
@@ -12,6 +15,7 @@ const Signin = () => {
     const [failed, setFailed] = useState(false)
     const history = useHistory()
     const [loading, setLoading] = useState(false)
+    const {setItems} = useCart()
 
     const handleSignin = async values => {
         try {
@@ -20,12 +24,24 @@ const Signin = () => {
             const { data } = await base.add('/signin', values)
             const { user } = data
             auth.setAuth(user)
+            
+            const param = queryString.stringify({
+                userId: user.id,
+                status: false
+            })
+            const getOrderRes = await base.query('/orders', param)
+            const getOrder = getOrderRes.data[0]
+            if (typeof (getOrder) !== 'undefined') {
+                setItems((JSON.parse(getOrder.orderJson).items))
+            }
+
             setTimeout(() => {
                 setLoading(false)
                 history.push(user.id === 1 ? '/admin' : '/')
             }, 2000)
         } catch (error) {
             setFailed(error.response.data)
+            setLoading(false)
         }
     }
 

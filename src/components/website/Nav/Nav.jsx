@@ -2,6 +2,9 @@ import { useCart } from "react-use-cart"
 import Toast from "../Toast/Toast"
 import { Link, NavLink } from "react-router-dom"
 import formatter from "../../../utils/format/formatter"
+import useOrder from "../../../utils/hooks/useOrder"
+import auth from "../../../utils/auth/auth"
+
 
 const Nav = () => {
 
@@ -33,7 +36,6 @@ const Nav = () => {
                                 <li className="heart-icon">
                                     <a href="/">
                                         <i className="icon_heart_alt"></i>
-                                        <span>1</span>
                                     </a>
                                 </li>
                                 <li className="cart-icon">
@@ -72,7 +74,8 @@ const Nav = () => {
                                             </div> : ''}
                                         <div className="select-button">
                                             <Link exact={true} to="/cart" className="primary-btn view-card">VIEW CART</Link>
-                                            <Link exact={true} to="/checkout" className="primary-btn checkout-btn">CHECK OUT</Link>
+                                            <Link disable={true}
+                                            exact={true} to="/checkout" className="primary-btn checkout-btn">CHECK OUT</Link>
                                         </div>
                                     </div>
                                 </li>

@@ -6,7 +6,6 @@ const Search = ({ onSearch }) => {
 
     const handleSearch = e => {
         const values = e.target.value
-        console.log(values);
         if (searchRef.current) {
             clearTimeout(searchRef)
         }
@@ -16,11 +15,10 @@ const Search = ({ onSearch }) => {
     }
 
     return (
-        <div className="form-group">
-            <input className="form-control" placeholder="Search here..."
-                onChange={handleSearch}
-            />
-        </div>
+        <input className="form-control" placeholder="Search here..."
+            onChange={handleSearch}
+        />
+
     )
 }
 

@@ -1,13 +1,17 @@
 import { Link } from "react-router-dom"
+import { useCart } from "react-use-cart"
 import auth from "../../../utils/auth/auth"
 import cartService from "../../../utils/service/cart.service"
 
 
 const Header = () => {
 
+    const {emptyCart} = useCart()
+
+
     const handleSignout = () => {
-        cartService.save()
-        auth.clear()
+        cartService.signout()
+        emptyCart()
     }
 
     return (

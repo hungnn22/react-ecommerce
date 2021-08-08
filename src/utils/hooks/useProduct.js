@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react"
 import base from "../api/base"
 import queryString from 'query-string'
+import cloud from "../api/cloud"
 
 const res = '/products'
 
 const useProduct = (typeId) => {
-
-    console.log(typeId);
 
     const initFilters = {
         _limit: 6,
@@ -14,7 +13,7 @@ const useProduct = (typeId) => {
         typeId: typeId !== null ? typeId : ''
 
     }
-    
+
 
     const [products, setProducts] = useState([])
     const [filters, setFilters] = useState(initFilters)
@@ -32,6 +31,55 @@ const useProduct = (typeId) => {
         }
         getData()
     }, [filters])
+
+    const handleRemove = async id => {
+        const { data } = await base.remove('/products', id)
+        setProducts(products.filter(product => (product.id !== id)))
+    }
+
+    const handleAdd = async values => {
+        const formData = new FormData()
+        formData.append('file', values.image[0])
+        formData.append('upload_preset', 'ecommer')
+
+
+        const response = await cloud.upload(formData)
+        const linkImg = response.data.secure_url
+
+        values = {
+            ...values,
+            price: Number(values.price),
+            quantity: Number(values.quantity),
+            image: linkImg,
+            rating: Math.floor(Math.random() * 5 + 1),
+            typeId: Number(values.typeId)
+        }
+        const { data } = await base.add('/products', values)
+        setProducts([...products, data])
+    }
+
+    const handleEdit = async (id, values, product) => {
+        let linkImg = ''
+
+        if (values.image.length !== 0) {
+            const formData = new FormData()
+            formData.append('file', values.image[0])
+            formData.append('upload_preset', 'ecommer')
+            const response = await cloud.upload(formData)
+            linkImg = response.data.secure_url
+        } else {
+            linkImg = product.image
+        }
+
+        values = {
+            ...values,
+            image: linkImg
+        }
+        const { data } = await base.edit('/products', id, values)
+        const newList = products.map(p => (p.id === id ? data : p))
+        setProducts(newList)
+    }
+
 
     const handleChangePage = newPage => {
         setFilters({
@@ -77,7 +125,10 @@ const useProduct = (typeId) => {
         totalRows: totalRows,
         onSearch: handleSearch,
         onSort: handleSort,
-        onFilterByCategory: handleFilterByCategory
+        onFilterByCategory: handleFilterByCategory,
+        onRemove: handleRemove,
+        onAdd: handleAdd,
+        onEdit: handleEdit
     }
 }
 

@@ -6,7 +6,6 @@ import Nav from "../components/website/Nav/Nav";
 const WebsiteLayout = (props) => {
 
     const user = localStorage.getItem('user')
-    console.log(user);
 
     return (
         <div className="" style={{ position: 'relative' }}>

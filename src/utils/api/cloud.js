@@ -5,6 +5,6 @@ const instance = axios.create({
     "Content-Type": 'application/jsonserver'
 })
 
-const add = values => (instance.post('/image/upload', values))
+const upload = values => (instance.post('/image/upload', values))
 
-export default add
+export default {upload}
