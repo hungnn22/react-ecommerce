@@ -1,21 +1,15 @@
 import Product from "../Product/Product"
-import Slider from "react-slick"
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
-import { Link, NavLink } from "react-router-dom"
-import { useEffect } from "react"
+import { Link } from "react-router-dom"
+import useProduct from "../../../utils/hooks/useProduct"
+import Sliders from "../Sliders/Sliders"
+import useCategory from '../../../utils/hooks/useCategory'
 
-const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3
-};
 
 const Women = (props) => {
 
-    const { womenProducts, categories } = props
+    const { categories } = useCategory()
+
+    const {products} = useProduct(2)
 
     return (
         <section className="women-banner spad">
@@ -40,15 +34,11 @@ const Women = (props) => {
                                 >{c.name}</button>
                             ))}
                         </ul>
-
-                        {/* <div className="product-slider owl-carousel row d-flex"> */}
-                        <Slider {...settings}>
-                            {womenProducts && womenProducts.map(p => (
+                        <Sliders>
+                            {products && products.map(p => (
                                 <Product key={p.id} product={p} />
                             ))}
-                        </Slider>
-
-                        {/* </div> */}
+                        </Sliders>
                     </div>
                 </div>
             </div>

@@ -2,21 +2,21 @@ import { useEffect } from "react"
 import CategoryFilter from "../../../../components/website/Filter/Filter";
 import Product from "../../../../components/website/Product/Product";
 import Search from "../../../../components/website/Search/Search";
-import useWomens from "../../../../utils/hooks/useWomens";
+import useProduct from "../../../../utils/hooks/useProduct";
 import Pagination from '../../../../components/website/Pagination/Pagination'
 import Sort from "../../../../components/website/Sort/Sort";
 
 const WomenCollection = (props) => {
 
-    const { products, filters, onChangePage, totalRows, onSearch, onSort, onFilterByCategory } = useWomens()
+    const { products, filters, onChangePage, totalRows, onSearch, onSort, onFilterByCategory } = useProduct(2)
 
-    // useEffect(() => {
-    //     window.scroll({
-    //         top: 0,
-    //         left: 0,
-    //         behavior: 'smooth'
-    //     })
-    // }, [])
+    useEffect(() => {
+        window.scroll({
+            top: 800,
+            left: 0,
+            behavior: 'smooth'
+        })
+    }, [])
 
     return (
         <div className="py-5 container">

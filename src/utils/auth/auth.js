@@ -7,13 +7,8 @@ const getAuth = () => {
         (JSON.parse(localStorage.getItem('user'))) : null
 }
 
-const isLogined = () => {
-    try {
-        if (localStorage.getItem('user') !== null) return true
-        else return false
-    } catch (error) {
-        return false
-    }
+const isSignin = () => {
+    return localStorage.getItem('user') !== null 
 }
 
 const clear = () => {
@@ -33,5 +28,5 @@ const isAdmin = () => {
 }
 
 export default {
-    isLogined, isAdmin, setAuth, getAuth, clear
+    isSignin, isAdmin, setAuth, getAuth, clear
 }

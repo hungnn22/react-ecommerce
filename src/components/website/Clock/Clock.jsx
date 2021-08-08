@@ -1,6 +1,14 @@
+import useClock from "../../../utils/hooks/useClock"
+
 const Clock = () => {
+
+    const {timer} = useClock()
+    console.log(timer);
+
     return (
-        <section className="deal-of-week set-bg spad" data-setbg="assets/img/time-bg.jpg">
+        <section className="deal-of-week set-bg spad"
+            style={{backgroundImage: 'url("https://res.cloudinary.com/hungnn22cloudinary/image/upload/v1628418585/ecommer/time-bg_uvcoo9.jpg")'}}
+        >
             <div className="container">
                 <div className="col-lg-6 text-center">
                     <div className="section-title">
@@ -14,19 +22,19 @@ const Clock = () => {
                     </div>
                     <div className="countdown-timer" id="countdown">
                         <div className="cd-item">
-                            <span>56</span>
+                            <span>{Number(timer.hour + 10)}</span>
                             <p>Days</p>
                         </div>
                         <div className="cd-item">
-                            <span>12</span>
+                            <span>{timer.hour}</span>
                             <p>Hrs</p>
                         </div>
                         <div className="cd-item">
-                            <span>40</span>
+                            <span>{timer.min}</span>
                             <p>Mins</p>
                         </div>
                         <div className="cd-item">
-                            <span>52</span>
+                            <span>{timer.sec}</span>
                             <p>Secs</p>
                         </div>
                     </div>

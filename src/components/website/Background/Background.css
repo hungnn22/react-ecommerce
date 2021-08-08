@@ -1,0 +1,43 @@
+.carouse {
+    position: relative;    
+}
+
+.carouse img {
+    width: 100%;
+    animation-duration: 2s;
+    object-fit: cover;
+    animation-name: showCarouse;
+}
+
+.carouse .content {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    animation-duration: 1.25s;
+    animation-name: showContent;
+    animation-timing-function: linear;
+}
+
+.carouse .content h2 {
+    font-weight: 500;
+}
+
+@keyframes showCarouse {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes showContent {
+    from {
+        left: 0%;
+        opacity: 0;
+    }
+    to {
+        left: 20%;
+        opacity: 1;
+    }
+}

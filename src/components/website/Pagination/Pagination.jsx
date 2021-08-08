@@ -6,7 +6,7 @@ const Pagination = ({ filters, onChangePage, totalRows }) => {
 
     return (
         <div className="d-flex align-items-center justify-content-center my-4"
-            style={{position: 'absolute', bottom: '15px', left: '45%'}}
+            style={{position: 'absolute', bottom: '0', left: '45%'}}
         >
             <button
                 className="btn btn-outline-dark mx-1"

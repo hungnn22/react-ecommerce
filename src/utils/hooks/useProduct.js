@@ -3,13 +3,18 @@ import base from "../api/base"
 import queryString from 'query-string'
 
 const res = '/products'
-const initFilters = {
-    // typeId: 2,
-    _limit: 6,
-    _page: 1
-}
 
-const useWomens = () => {
+const useProduct = (typeId) => {
+
+    console.log(typeId);
+
+    const initFilters = {
+        _limit: 6,
+        _page: 1,
+        typeId: typeId !== null ? typeId : ''
+
+    }
+    
 
     const [products, setProducts] = useState([])
     const [filters, setFilters] = useState(initFilters)
@@ -76,4 +81,4 @@ const useWomens = () => {
     }
 }
 
-export default useWomens
+export default useProduct

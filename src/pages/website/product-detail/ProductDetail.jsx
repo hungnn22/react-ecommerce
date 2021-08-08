@@ -4,6 +4,7 @@ import { useCart } from "react-use-cart";
 import base from "../../../utils/api/base";
 import Toast from "../../../components/website/Toast/Toast";
 import Star from "../../../components/website/Star/Star";
+import formatter from "../../../utils/format/formatter";
 
 const ProductDetail = (props) => {
 
@@ -57,7 +58,7 @@ const ProductDetail = (props) => {
                 <div className="col px-4 text-left" style={{ position: 'relative' }}>
                     <h2>{product.name}</h2>
                     <Star rating={product.rating} />
-                    <p>Price: {product.price}</p>
+                    <p>Price: {formatter(product.price)}</p>
                     <p>Quantity: {product.quantity}</p>
                     <div className="text-dark text-left mt-2"><b>Description:</b> {product.des}</div>
 

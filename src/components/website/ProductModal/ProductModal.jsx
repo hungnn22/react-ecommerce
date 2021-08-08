@@ -3,6 +3,7 @@ import { useCart } from "react-use-cart"
 import base from "../../../utils/api/base"
 import Star from "../Star/Star"
 import Toast from "../Toast/Toast"
+import formatter from "../../../utils/format/formatter"
 
 const ProductModal = ({ product }) => {
 
@@ -46,20 +47,13 @@ const ProductModal = ({ product }) => {
                     <div className="row">
                         <div className="col-6">
                             <img src={product.image} />
-                            <div className="text-dark text-left mt-2"><b>Description:</b> {product.des}</div>
                         </div>
                         <div className="col-6 px-4 text-left">
                             <div className="h4">{product.name}</div>
-                            <div>Price: {product.price}</div>
+                            <div>Price: {formatter(product.price)}</div>
                             <div>Quantity: {product.quantity}</div>
-                            <br />
-                            <div>Reviews({reviews.length}):</div>
-                            {reviews.map(review => (
-                                <div key={review.id} className="border-bottom pb-2">
-                                    <div>{review.createAt}: {review.content}</div>
-                                    <Star rating={review.rating} />
-                                </div>
-                            ))}
+                            <div className="text-dark text-left mt-2"><b>Description:</b> {product.des}</div>
+                            <Star rating={product.rating} />
                         </div>
                     </div>
                 </div>

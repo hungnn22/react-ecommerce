@@ -1,19 +1,21 @@
 import Background from "../components/website/Background/Background"
-import Banner from "../components/website/Banner/Banner";
-import TopProduct from './../components/website/TopProduct/TopProduct'
 import Header from "../components/website/Header/Header"
-import Blogs from './../components/website/Blogs/Blogs'
 import Footer from './../components/website/Footer/Footer'
+import Nav from "../components/website/Nav/Nav";
 
 const WebsiteLayout = (props) => {
+
+    const user = localStorage.getItem('user')
+    console.log(user);
 
     return (
         <div className="" style={{ position: 'relative' }}>
             <Header />
-            <Background />
-            <div style={{minHeight: '150vh', position: 'relative'}}>
+            <Nav />    
+            <Background />   
+            <div className="mb-4" style={{minHeight: '100vh',position: 'relative', overflow: 'hidden' }}>
                 {props.children}
-                </div>
+            </div>
             <Footer />
             <button onClick={() => {
                 window.scroll({

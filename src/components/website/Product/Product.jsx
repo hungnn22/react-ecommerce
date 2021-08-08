@@ -3,6 +3,7 @@ import { useCart } from 'react-use-cart'
 import ProductModal from '../ProductModal/ProductModal'
 import Star from '../Star/Star'
 import Toast from '../Toast/Toast'
+import formatter from '../../../utils/format/formatter'
 
 const Product = ({ product }) => {
 
@@ -47,7 +48,7 @@ const Product = ({ product }) => {
                     <h5>{product.name}</h5>
                 </Link>
                 <div className="product-price">
-                    ${product.price.toFixed(2)}
+                    {formatter(product.price)}
                 </div>
             </div>
         </div>

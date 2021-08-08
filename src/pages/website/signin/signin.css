@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&amp;display=swap");
+.sign-card-header:first-child {
+  border-radius: calc(1rem - 1px) calc(1rem - 1px) 0 0;
+}
+.sign-card-header {
+  position: relative;
+  padding: 2rem 2rem;
+  border-bottom: none;
+  background-color: white;
+  box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
+  z-index: 2;
+}
+.sign-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: none;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  border-radius: 1rem;
+}
+.sign-bg-gray-100 {
+  background-color: #f8f9fa !important;
+}
+.page-holder{
+  font-family: 'Poppins'!important;
+}
+.sign-text-primary {
+  color: #4650dd !important;
+}
+/* h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+ 
+  font-weight: 700;
+  line-height: 1.2;
+} */
+.sign-text-muted {
+  color: #6c757d !important;
+}
+.sign-lead {
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+.sign-text-sm {
+  font-size: .7875rem !important;
+}
+/* h3, .h3 {
+  font-size: 1.575rem;
+} */
+.sign-hide
+{
+    display: none;
+}
+a.sign {
+    color: #4650dd!important;
+    text-decoration: underline!important;
+    cursor: pointer;
+  }
