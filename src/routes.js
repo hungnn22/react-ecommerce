@@ -13,26 +13,27 @@ import Dashboard from "./pages/admin/dashboard/dashboard";
 import ProductList from "./pages/admin/products/list";
 import AddProduct from "./pages/admin/products/add";
 import EditProduct from "./pages/admin/products/edit";
+import AdminRoute from "./utils/routerTypes/AdminRoute";
 
 const Routes = (props) => {
     return (
         <Switch>
             <Route exact={true} path="/admin/:path?/:path?/:path?">
                 <AdminLayout>
-                    <Route exact path="/admin/products/add">
-                        <AddProduct />
-                    </Route>
-                    <Route exact path="/admin/products/:id/edit">
-                        <EditProduct />
-                    </Route>
-
-
-                    <Route exact path="/admin/products">
-                        <ProductList />
-                    </Route>
-                    <Route exact path="/admin">
-                        <Dashboard />
-                    </Route>
+                    <Switch>
+                        <AdminRoute exact path="/admin/products/add">
+                            <AddProduct />
+                        </AdminRoute>
+                        <AdminRoute exact path="/admin/products/:id/edit">
+                            <EditProduct />
+                        </AdminRoute>
+                        <AdminRoute exact path="/admin/products">
+                            <ProductList />
+                        </AdminRoute>
+                        <AdminRoute exact path="/admin">
+                            <Dashboard />
+                        </AdminRoute>
+                    </Switch>
                 </AdminLayout>
             </Route>
             <Route exact={true} path="/signin">

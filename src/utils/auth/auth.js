@@ -8,7 +8,7 @@ const getAuth = () => {
 }
 
 const isSignin = () => {
-    return localStorage.getItem('user') !== null 
+    return localStorage.getItem('user') !== null
 }
 
 const clear = () => {
@@ -17,12 +17,19 @@ const clear = () => {
 
 const isAdmin = () => {
     try {
-        if (getAuth) {
+        if (getAuth()) {
             const user = JSON.parse(localStorage.getItem('user'))
+            console.log(user);
             return user.id === 1 ? true : false
         }
-        else return false
+        else {
+            console.log("Auth hkajhsd")
+
+            return false
+
+        }
     } catch (error) {
+        console.log("erro")
         return false
     }
 }

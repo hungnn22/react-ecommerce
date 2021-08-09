@@ -33,12 +33,6 @@ const Product = ({ product }) => {
                             data-toggle="modal"
                             data-target={`#productModal${product.id}`}
                         >+ View</button>
-                        <div className="modal fade" id={`productModal${product.id}`} tabIndex={-1} role="dialog"
-                            aria-labelledby={`productModal${product.id}`}
-                            aria-hidden="true">
-                            <ProductModal product={product} />
-                        </div>
-
                     </li>
                     <li className="w-icon"><a href="/"><i className="fa fa-random"></i></a></li>
                 </ul>
@@ -51,6 +45,12 @@ const Product = ({ product }) => {
                     {formatter(product.price)}
                 </div>
             </div>
+            <div className="modal fade" id={`productModal${product.id}`} tabIndex={-1} role="dialog"
+                aria-labelledby={`productModal${product.id}`}
+                aria-hidden="true">
+                <ProductModal product={product} />
+            </div>
+
         </div>
 
     )

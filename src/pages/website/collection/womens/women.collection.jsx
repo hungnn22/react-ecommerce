@@ -5,10 +5,12 @@ import Search from "../../../../components/website/Search/Search";
 import useProduct from "../../../../utils/hooks/useProduct";
 import Pagination from '../../../../components/website/Pagination/Pagination'
 import Sort from "../../../../components/website/Sort/Sort";
+import useCategory from "../../../../utils/hooks/useCategory";
 
 const WomenCollection = (props) => {
 
     const { products, filters, onChangePage, totalRows, onSearch, onSort, onFilterByCategory } = useProduct(2)
+    const {categories} = useCategory()
 
     useEffect(() => {
         window.scroll({
@@ -28,7 +30,7 @@ const WomenCollection = (props) => {
                 <div className="col-5"><Search onSearch={onSearch} /></div>
                 <div className="col-5 d-flex">
                     <div className="col"><Sort onSort={onSort} /></div>
-                    <div className="col"><CategoryFilter list={props.categories} onFilter={onFilterByCategory}  /></div>                    
+                    <div className="col"><CategoryFilter list={categories} onFilter={onFilterByCategory}  /></div>                    
                 </div>
             </div>
             <div className="d-flex row">

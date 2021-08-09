@@ -1,4 +1,10 @@
+import formatter from "../../../utils/format/formatter"
+import useOrder from "../../../utils/hooks/useOrder"
+
 const Dashboard = () => {
+
+    const { orders } = useOrder()
+
     return (
         <div id="layoutSidenav">
             <div id="layoutSidenav_content">
@@ -69,48 +75,39 @@ const Dashboard = () => {
                         <div className="card mb-4">
                             <div className="card-header">
                                 <i className="fas fa-table mr-1"></i>
-                                DataTable Example
+                                Order List
                             </div>
                             <div className="card-body">
                                 <div className="table-responsive">
                                     <table className="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                         <thead>
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
-                                                <th>Salary</th>
+                                                <th>#</th>
+                                                <th>Ship to</th>
+                                                <th>Phone number</th>
+                                                <th>Create At</th>
+                                                <th>Total</th>
+                                                <th>Status</th>
                                             </tr>
                                         </thead>
-                                        <tfoot>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
-                                                <th>Salary</th>
-                                            </tr>
-                                        </tfoot>
+
                                         <tbody>
-                                            <tr>
-                                                <td>Tiger Nixon</td>
-                                                <td>System Architect</td>
-                                                <td>Edinburgh</td>
-                                                <td>61</td>
-                                                <td>2011/04/25</td>
-                                                <td>$320,800</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Garrett Winters</td>
-                                                <td>Accountant</td>
-                                                <td>Tokyo</td>
-                                                <td>63</td>
-                                                <td>2011/07/25</td>
-                                                <td>$170,750</td>
-                                            </tr>
+                                            {orders.map((order, index) => (
+                                                <tr key={order.id}>
+                                                    <td className="align-middle">{index + 1}</td>
+                                                    <td>{order.address}</td>
+                                                    <td>{order.phone}</td>
+                                                    <td>{new Date(order.createAt).toDateString()}</td>
+                                                    <td>{formatter(order.total)}</td>
+                                                    <td>
+                                                        {order.status === true ? 
+                                                        <span className="text-success">Payment</span> :    
+                                                        <span className="text-warning">Not Payment</span>    
+                                                        
+                                                    }
+                                                    </td>
+                                                </tr>
+                                            ))}
                                         </tbody>
                                     </table>
                                 </div>

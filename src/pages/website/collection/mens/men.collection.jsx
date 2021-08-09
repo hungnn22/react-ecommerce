@@ -24,7 +24,7 @@ const MenCollection = () => {
         <div className="py-5 container">
             <div className="mb-4">
                 <h3 className="border-bottom pb-2"
-                >Women's Collection </h3>
+                >Men's Collection </h3>
             </div>
             <div className="row d-flex mb-4 justify-content-between">
                 <div className="col-5"><Search onSearch={onSearch} /></div>

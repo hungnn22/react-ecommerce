@@ -1,6 +1,15 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, useHistory } from "react-router-dom"
+import auth from './../../../utils/auth/auth'
 
 const Sidebar = () => {
+
+    const history = useHistory()
+
+    const handleSignout = () => {
+        auth.clear()
+        history.push('/signin')
+    }
+
     return (
         <nav id="sidebar" className="sidebar-wrapper">
             <div className="sidebar-content">
@@ -15,12 +24,12 @@ const Sidebar = () => {
                         <img className="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg" alt="User picture" />
                     </div>
                     <div className="user-info">
-                        <span className="user-name">Jhon
-                            <strong>Smith</strong>
+                        <span className="user-name">
+                            <strong>{auth.getAuth() && auth.getAuth().name}</strong>
                         </span>
                         <span className="user-role">Administrator</span>
                         <span className="user-status">
-                            <i style={{color: 'green'}} className="fa fa-circle" />
+                            <i style={{ color: 'green' }} className="fa fa-circle" />
                             <span>Online</span>
                         </span>
                     </div>
@@ -42,54 +51,24 @@ const Sidebar = () => {
                         <li className="header-menu">
                             <span>General</span>
                         </li>
-                        <li className="sidebar-dropdown">
+                        <li className="sidebar">
                             <NavLink exact={true} activeClassName="text-light" to="/admin">
                                 <i className="fa fa-tachometer-alt" />
                                 <span>Dashboard</span>
                                 <span className="badge badge-pill badge-warning">New</span>
                             </NavLink>
                         </li>
-                        <li className="sidebar-dropdown">
-                            <a href="#">
+                        <li className="sidebar">
+                            <NavLink exact={true} activeClassName="text-light" to="/admin/products">
                                 <i className="fa fa-shopping-cart" />
-                                <span>E-commerce</span>
-                                <span className="badge badge-pill badge-danger">3</span>
-                            </a>
-                            <div className="sidebar-submenu">
-                                <ul>
-                                    <li>
-                                        <NavLink exact={true} to="/admin/products">Product</NavLink>
-                                    </li>
-                                    <li>
-                                        <NavLink exact={true} to="/admin/categories">Category</NavLink>
-                                    </li>
-                                </ul>
-                            </div>
+                                <span>Product</span>
+                            </NavLink>
                         </li>
-                        <li className="sidebar-dropdown">
-                            <a href="#">
-                                <i className="far fa-gem" />
-                                <span>Components</span>
-                            </a>
-                            <div className="sidebar-submenu">
-                                <ul>
-                                    <li>
-                                        <a href="#">General</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Panels</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Tables</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Icons</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Forms</a>
-                                    </li>
-                                </ul>
-                            </div>
+                        <li className="sidebar">
+                            <NavLink exact={true} activeClassName="text-light" to="/admin/categories">
+                                <i className="fa fa-book" />
+                                <span>Catgory</span>
+                            </NavLink>
                         </li>
                         <li className="sidebar-dropdown">
                             <a href="#">
@@ -167,7 +146,9 @@ const Sidebar = () => {
                     <i className="fa fa-cog" />
                     <span className="badge-sonar" />
                 </a>
-                <a href="#">
+                <a href="/signin"
+                    onClick={handleSignout}
+                >
                     <i className="fa fa-power-off" />
                 </a>
             </div>

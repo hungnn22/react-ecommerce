@@ -40,37 +40,41 @@ const payment = async (values, items, cartTotal) => {
             quantity: items[i].quantity
         }
         console.log(detailValues);
-        const detailRes = await base.add('/orderDetails', detailValues)       
-        console.log(detailRes) 
+        const detailRes = await base.add('/orderDetails', detailValues)
+        console.log(detailRes)
     }
 }
 
 const signout = async () => {
-    const cartJson = localStorage.getItem('react-use-cart')
-    const cart = JSON.parse(cartJson)
-    const { isEmpty, cartTotal } = cart
-    const user = auth.getAuth()
-    const param = queryString.stringify({
-        userId: user.id,
-        status: false
-    })
-    const orderValues = {
-        userId: user.id,
-        total: cartTotal,
-        status: false,
-        orderJson: cartJson,
-        createAt: Date.now()
-    }
-    const getOrderRes = await base.query('/orders', param)
-    const getOrder = getOrderRes.data[0]
-    if (typeof (getOrder) === 'undefined') {
-        if (isEmpty === false) {
-            const addOrderRes = await base.add('/orders', orderValues)
+    try {
+        const cartJson = localStorage.getItem('react-use-cart')
+        const cart = JSON.parse(cartJson)
+        const { isEmpty, cartTotal } = cart
+        const user = auth.getAuth()
+        const param = queryString.stringify({
+            userId: user.id,
+            status: false
+        })
+        const orderValues = {
+            userId: user.id,
+            total: cartTotal,
+            status: false,
+            orderJson: cartJson,
+            createAt: Date.now()
         }
-    } else {
-        const updateOrderRes = await base.edit('/orders', getOrder.id, orderValues)
+        const getOrderRes = await base.query('/orders', param)
+        const getOrder = getOrderRes.data[0]
+        if (typeof (getOrder) === 'undefined') {
+            if (isEmpty === false) {
+                const addOrderRes = await base.add('/orders', orderValues)
+            }
+        } else {
+            const updateOrderRes = await base.edit('/orders', getOrder.id, orderValues)
+        }
+        localStorage.clear()
+    } catch (error) {
+
     }
-    localStorage.clear()
 }
 
 export default {
