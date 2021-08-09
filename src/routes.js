@@ -14,6 +14,8 @@ import ProductList from "./pages/admin/products/list";
 import AddProduct from "./pages/admin/products/add";
 import EditProduct from "./pages/admin/products/edit";
 import AdminRoute from "./utils/routerTypes/AdminRoute";
+import CategoryList from "./pages/admin/category/list";
+import AddCategory from "./pages/admin/category/add";
 
 const Routes = (props) => {
     return (
@@ -29,6 +31,13 @@ const Routes = (props) => {
                         </AdminRoute>
                         <AdminRoute exact path="/admin/products">
                             <ProductList />
+                        </AdminRoute>
+
+                        <AdminRoute exact path="/admin/categories/add">
+                            <AddCategory />
+                        </AdminRoute>
+                        <AdminRoute exact path="/admin/categories">
+                            <CategoryList />
                         </AdminRoute>
                         <AdminRoute exact path="/admin">
                             <Dashboard />

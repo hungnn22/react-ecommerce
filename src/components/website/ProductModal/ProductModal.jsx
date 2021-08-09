@@ -46,7 +46,12 @@ const ProductModal = ({ product }) => {
                 <div className="modal-body">
                     <div className="row">
                         <div className="col-6">
-                            <img src={product.image} />
+                            <img src={product.image}
+                                style={{
+                                    width: '100%',
+                                    objectFit: 'cover'
+                                }}
+                            />
                         </div>
                         <div className="col-6 px-4 text-left">
                             <div className="h4">{product.name}</div>
